@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Clement Toh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-neutral-900 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="font-semibold text-lg tracking-tight text-neutral-900">Clement.Builds</a>
+            <div class="flex gap-6 text-sm font-medium text-neutral-500">
+                <a href="index.html#projects" class="hover:text-neutral-900 transition-colors">Projects</a>
+                <a href="about.html" class="text-neutral-900">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-40 pb-24">
+        <h1 class="text-5xl font-semibold mb-12">About Me</h1>
+        
+        <div class="grid md:grid-cols-3 gap-12">
+            <!-- Left Column: Bio -->
+            <div class="md:col-span-2 space-y-6 text-neutral-600 leading-relaxed">
+                <p>
+                    I am a Mechanical Engineering undergraduate at the National University of Singapore (NUS) with a deep passion for the intersection of hardware systems and real-time data pipelines.
+                </p>
+                <p>
+                    My journey began at Singapore Polytechnic, where I graduated with Merit in Mechanical Engineering. Throughout my academic and professional career, I have focused on bridging the gap between physical mechanical design and digital industrial monitoring.
+                </p>
+                <p>
+                    Whether I am modeling anthropomorphic exoskeletons or integrating IIoT sensors into metal 3D printers, my goal is always to build systems that are both mechanically robust and data-driven.
+                </p>
+            </div>
+
+            <!-- Right Column: Quick Info -->
+            <div class="space-y-8 text-sm">
+                <div>
+                    <h3 class="font-semibold text-neutral-900 mb-2">Connect</h3>
+                    <p class="text-neutral-500">clement.toh2604@gmail.com</p>
+                    <p class="text-neutral-500">+65 8866 3912</p>
+                    <a href="https://www.linkedin.com/in/clement26" class="text-neutral-900 underline">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="mt-20 pt-12 border-t border-neutral-200">
+            <h2 class="text-2xl font-semibold mb-8">Technical Expertise</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-sm">
+                <div>
+                    <h4 class="font-semibold text-neutral-900 mb-2">CAD & Design</h4>
+                    <p class="text-neutral-500">Autodesk Inventor, Fusion 360, Creo, Siemens NX, AutoCAD</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-neutral-900 mb-2">Programming & Data</h4>
+                    <p class="text-neutral-500">Python, C++, Arduino, MATLAB, Grafana, InfluxDB</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-neutral-900 mb-2">Manufacturing</h4>
+                    <p class="text-neutral-500">Additive Manufacturing (LPBF/FDM), Machining, Prototyping</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-neutral-900 mb-2">Engineering Tools</h4>
+                    <p class="text-neutral-500">Mastercam, Minitab, KNIME, NI Multisim</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
