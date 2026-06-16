@@ -17,15 +17,21 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="index.html" class="font-semibold text-lg tracking-tight text-neutral-900">Clement.Builds</a>
-            <!-- Added items-center here to fix the vertical alignment -->
-            <div class="flex items-center gap-6 text-sm font-medium text-neutral-500">
+        <!-- Changed px-6 to px-4 md:px-6 to give iPhones a bit more edge room -->
+        <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+            
+            <!-- Added shrink-0 and made text slightly smaller on mobile (text-base md:text-lg) -->
+            <a href="index.html" class="font-semibold text-base md:text-lg tracking-tight text-neutral-900 shrink-0">Clement.Builds</a>
+            
+            <!-- Changed gap-6 to gap-3 md:gap-6, and text-sm to text-xs md:text-sm -->
+            <div class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-neutral-500">
                 <a href="index.html#projects" class="hover:text-neutral-900 transition-colors">Projects</a>
-                <a href="about.html" class="text-neutral-900">About</a>
-                <!-- Added the black button styling to match index.html -->
-                <a href="mailto:clement.toh2604@gmail.com" class="px-5 py-2 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-colors">Contact</a>
+                <a href="about.html" class="hover:text-neutral-900 transition-colors">About</a>
+                
+                <!-- Shrunk the button padding slightly for mobile (px-4 py-1.5 md:px-5 md:py-2) and added shrink-0 -->
+                <a href="mailto:clement.toh2604@gmail.com" class="px-4 py-1.5 md:px-5 md:py-2 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-colors shrink-0">Contact</a>
             </div>
+            
         </div>
     </nav>
 
