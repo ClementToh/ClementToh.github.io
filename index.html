@@ -13,22 +13,20 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-white text-neutral-900 antialiased selection:bg-black selection:text-white">
-
+<!-- Added id="top" to the body -->
+<body id="top" class="bg-white text-neutral-900 antialiased selection:bg-black selection:text-white">
 
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200">
-        <!-- Changed px-6 to px-4 md:px-6 to give iPhones a bit more edge room -->
         <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
             
-            <!-- Added shrink-0 and made text slightly smaller on mobile (text-base md:text-lg) -->
-            <a href="index.html" class="font-semibold text-base md:text-lg tracking-tight text-neutral-900 shrink-0">Clement.Builds</a>
+            <!-- Changed href from "index.html" to "#top" for smooth scrolling -->
+            <a href="#top" class="font-semibold text-base md:text-lg tracking-tight text-neutral-900 shrink-0">Clement.Builds</a>
             
-            <!-- Changed gap-6 to gap-3 md:gap-6, and text-sm to text-xs md:text-sm -->
             <div class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-neutral-500">
-                <a href="index.html#projects" class="hover:text-neutral-900 transition-colors">Projects</a>
+                <!-- Changed href from "index.html#projects" to "#projects" -->
+                <a href="#projects" class="hover:text-neutral-900 transition-colors">Projects</a>
                 <a href="about.html" class="hover:text-neutral-900 transition-colors">About</a>
                 
-                <!-- Shrunk the button padding slightly for mobile (px-4 py-1.5 md:px-5 md:py-2) and added shrink-0 -->
                 <a href="mailto:clement.toh2604@gmail.com" class="px-4 py-1.5 md:px-5 md:py-2 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-colors shrink-0">Contact</a>
             </div>
             
@@ -45,19 +43,16 @@
         <p class="text-neutral-600 text-lg md:text-xl leading-relaxed mb-10">
            <strong>Currently developing advanced motion and vision control platforms for industrial laser micro-processing systems at JD Union.</strong>
         </p>
-        <!-- Removed mb-10 from this paragraph so we can perfectly control the gap with the buttons -->
         <p class="text-neutral-600 text-lg md:text-xl leading-relaxed">
             Mechanical Engineering undergraduate at the <strong>National University of Singapore (NUS)</strong> and <strong>Singapore Polytechnic Merit alumnus</strong>.
         </p>
         
-        <!-- Added mt-20 to push the buttons down, perfectly balancing the 20 padding below it -->
         <div class="flex justify-center gap-4 mt-20">
             <a href="https://www.linkedin.com/in/clement26" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-neutral-900 text-white text-sm font-medium rounded-full hover:bg-neutral-800 transition-colors">LinkedIn</a>
             <a href="https://drive.google.com/file/d/1G_z77VHvhya9I1R-Mu3qGcDqIfgXrCUa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-neutral-900 text-white text-sm font-medium rounded-full hover:bg-neutral-800 transition-colors">Resume</a>
         </div>
     </section>
 
-    <!-- Changed py-12 to pt-0 pb-12 to prevent double-spacing between the sections -->
     <section id="projects" class="max-w-6xl mx-auto px-6 pt-0 pb-12">
         <div class="flex items-center justify-center mb-12">
             <p class="text-neutral-500 text-sm">Click project photos below to learn more!</p>
@@ -131,7 +126,9 @@
     <footer id="contact" class="border-t border-neutral-200 mt-12 bg-white">
         <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-neutral-500">
             <p>© Clement TOH - 2026</p>
-            <div class="flex gap-6">
+            <!-- Added items-center here for perfect vertical alignment -->
+            <div class="flex items-center gap-6">
+                <!-- Kept as #projects -->
                 <a href="#projects" class="hover:text-neutral-900 transition-colors">Projects</a>
                 <a href="about.html" class="hover:text-neutral-900 transition-colors">About</a>
                 <a href="mailto:clement.toh2604@gmail.com" class="hover:text-neutral-900 transition-colors">Contact</a>
