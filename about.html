@@ -21,13 +21,15 @@
             <a href="index.html" class="font-semibold text-base md:text-lg tracking-tight text-neutral-900 shrink-0">Clement.Builds</a>
             <div class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-neutral-500">
                 <a href="index.html#projects" class="hover:text-neutral-900 transition-colors">Projects</a>
-                <a href="about.html" class="hover:text-neutral-900 transition-colors">About</a>
+                <!-- Changed href from about.html to #top -->
+                <a href="#top" class="hover:text-neutral-900 transition-colors">About</a>
                 <a href="mailto:clement.toh2604@gmail.com" class="px-4 py-1.5 md:px-5 md:py-2 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-colors shrink-0">Contact</a>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto px-6 pt-40 pb-24">
+    <!-- Added id="top" here so the links know where to scroll -->
+    <main id="top" class="max-w-4xl mx-auto px-6 pt-40 pb-24">
         <h1 class="text-5xl font-semibold mb-12">About Me</h1>
         
         <div class="grid md:grid-cols-3 gap-12">
@@ -46,7 +48,6 @@
 
             <!-- Right Column: Quick Info -->
             <div class="space-y-8 text-sm">
-                <!-- Converted to flex column to cleanly space the items, made Connect bold/larger, and linked the email -->
                 <div class="flex flex-col gap-2">
                     <h3 class="text-lg font-bold text-neutral-900 mb-1">Connect</h3>
                     <a href="mailto:clement.toh2604@gmail.com" class="text-neutral-500 hover:text-neutral-900 hover:underline transition-colors w-fit">clement.toh2604@gmail.com</a>
@@ -86,7 +87,8 @@
             <p>© Clement TOH - 2026</p>
             <div class="flex items-center gap-6">
                 <a href="index.html#projects" class="hover:text-neutral-900 transition-colors">Projects</a>
-                <a href="about.html" class="hover:text-neutral-900 transition-colors">About</a>
+                <!-- Changed href from about.html to #top -->
+                <a href="#top" class="hover:text-neutral-900 transition-colors">About</a>
                 <a href="mailto:clement.toh2604@gmail.com" class="hover:text-neutral-900 transition-colors">Contact</a>
             </div>
         </div>
