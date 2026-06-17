@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5Stack IIoT Pipeline | Clement.Builds</title>
+
+    <link rel="icon" type="image/png" href="images/CT32x32.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body id="top" class="bg-white text-neutral-900 antialiased selection:bg-black selection:text-white">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+            <a href="index.html#top" class="font-semibold text-base md:text-lg tracking-tight text-neutral-900 shrink-0 hover:opacity-70 transition-opacity">Clement.Builds</a>
+            <div class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-neutral-500">
+                <a href="index.html#projects" class="hover:text-neutral-900 transition-colors">← Back to Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="max-w-4xl mx-auto px-6 pt-40 pb-12">
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-8 text-neutral-900">
+            M5Stack IIoT & Real-Time Telemetry Pipeline
+        </h1>
+        
+        <div class="flex flex-wrap gap-x-12 gap-y-6 py-6 border-t border-b border-neutral-200 text-sm">
+            <div>
+                <p class="text-neutral-400 font-medium mb-1">Role</p>
+                <p class="text-neutral-900 font-medium">Engineering Intern</p>
+            </div>
+            <div>
+                <p class="text-neutral-400 font-medium mb-1">Organisation</p>
+                <p class="text-neutral-900 font-medium">
+                    <a href="https://www.a-star.edu.sg/artc" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-neutral-600 transition-colors">
+                        A*STAR (ARTC)
+                    </a>
+                </p>
+            </div>
+            <div>
+                <p class="text-neutral-400 font-medium mb-1">Period</p>
+                <p class="text-neutral-900 font-medium">Sep 2022 – Apr 2023</p>
+            </div>
+            <div>
+                <p class="text-neutral-400 font-medium mb-1">Tech Stack</p>
+                <p class="text-neutral-900 font-medium">C++, M5Stack FIRE, InfluxDB, Grafana</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-6 pb-16">
+        <div class="w-full aspect-video md:aspect-[21/9] rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200">
+            <img src="https://images.unsplash.com/photo-1559297434-fae8a1916a79?auto=format&fit=crop&q=80&w=1600" alt="Telemetry Dashboard Interface" class="w-full h-full object-cover">
+        </div>
+    </section>
+
+    <article class="max-w-3xl mx-auto px-6 pb-24 space-y-12 text-lg text-neutral-600 leading-relaxed">
+        
+        <div>
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-4">The Challenge</h2>
+            <p class="mb-4">
+                A major hurdle in Industrial Additive Manufacturing (AM) is the lack of real-time feedback during the fabrication process. Because complex metal parts can take long periods to construct using Laser Powder Bed Fusion (LPBF), hidden flaws or excessive residual stresses can go unnoticed, resulting in wasted time, materials, and machine life. 
+            </p>
+            <p>
+                To solve this, I was tasked with developing a system for real-time documentation and data acquisition to monitor the powder bed and machine status, ensuring errors could be detected and mitigated instantly.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-4">Edge Computing with M5Stack IIoT</h2>
+            <p class="mb-4">
+                I integrated an M5Stack FIRE Industrial IoT device directly with a commercial EOS M 290 metal 3D printer. Using C++, I developed custom firmware to parse live machine states and provide remote monitoring capabilities.
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li>Engineered logic to capture and interpret real-time machine signals.</li>
+                <li>Programmed the device to serve as an immediate visual and data-driven alert system for operators, significantly reducing response times to print errors.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-4">End-to-End Data Telemetry Pipeline</h2>
+            <p class="mb-4">
+                Beyond edge-level alerts, the data needed to be logged and visualized for deeper process optimization. I built a comprehensive telemetry pipeline routing the machine data into a time-series database.
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li>Deployed <strong>InfluxDB</strong> to continuously ingest high-frequency sensor data from the printer.</li>
+                <li>Developed interactive, live-updating dashboards in <strong>Grafana</strong> to visualize the data stream.</li>
+                <li>Configured the dashboard to simultaneously track and analyze 5 critical process parameters, specifically monitoring powder spreadability and chamber conditions.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-4">Impact & Results</h2>
+            <p class="mb-4">
+                The integrated system provided unprecedented visibility into the LPBF process. Through rigorous validation experiments, the telemetry pipeline successfully identified micro-level powder bed surface deviations as small as <strong>~50 µm</strong>. Furthermore, it reliably verified that chamber oxygen levels were maintained strictly below 0.1%, ensuring high-quality, defect-free metal prints.
+            </p>
+        </div>
+
+    </article>
+
+    <footer id="contact" class="border-t border-neutral-200 bg-white">
+        <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-neutral-500">
+            <p>© Clement TOH - 2026</p>
+            <div class="flex items-center gap-6">
+                <a href="mailto:clement.toh2604@gmail.com" class="hover:text-neutral-900 transition-colors">Contact Me</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
