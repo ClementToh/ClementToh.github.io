@@ -78,18 +78,6 @@
         <div>
             <h2 class="text-2xl font-semibold text-neutral-900 mb-4">Phase 1: Hardware Instrumentation</h2>
             <p class="mb-4">
-                To achieve real-time telemetry, I engineered a custom sensor instrumentation system directly onto a commercial EOS M 290 3D printer. 
-            </p>
-            <ul class="list-disc pl-6 space-y-2 mb-6">
-                <li>Modified the industrial hardware to safely route 12 separate signal channels from two strain gauges and an NI-9236 DAQ module through custom-machined 13 mm ports.</li>
-                <li>Designed and 3D printed secure PCB holders using Siemens NX to organize internal wiring.</li>
-                <li>Implemented a 200mA fast-acting fuse on the +5V power supply to completely eliminate the risk of sparks within the powder chamber.</li>
-            </ul>
-        </div>
-
-        <div>
-            <h2 class="text-2xl font-semibold text-neutral-900 mb-4">Phase 1: Hardware Instrumentation</h2>
-            <p class="mb-4">
                 To achieve real-time telemetry, I engineered a custom sensor instrumentation system directly onto a commercial EOS M 290 3D printer.
             </p>
             <ul class="list-disc pl-6 space-y-2 mb-8">
@@ -116,6 +104,37 @@
 
             </div>
         </div>
+
+        <div>
+            <h2 class="text-2xl font-semibold text-neutral-900 mb-4">Phase 2: Edge Computing & IoT Telemetry</h2>
+            <p class="mb-4">
+                With the hardware safely routing data, I integrated an M5Stack FIRE Industrial IoT device to remotely monitor the EOS M 290's machine state, ensuring continuous tracking of print progress without requiring an operator's physical presence.
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-8">
+                <li><strong>Firmware & Version Control:</strong> Engineered C++ firmware using the Platform.io IDE. Managed source code and continuous integration using GitLab, establishing a dedicated branch (<code>m290phr</code>) for safe version control during development.</li>
+                <li><strong>Data Querying:</strong> Constructed custom Flux scripts to parse real-time telemetry from an InfluxDB time-series database, specifically filtering for the printer's signal tower equipment nodes.</li>
+                <li><strong>Visual Alerts & Validation:</strong> Programmed logic to translate database states into immediate visual alerts via the edge device's LED array (<span class="text-green-600 font-medium">Green</span> for active printing, <span class="text-red-600 font-medium">Red</span> for errors). Validated the system's responsiveness by physically inducing errors, such as a sudden chamber door opening during a simulated build.</li>
+            </ul>
+
+            <div class="flex flex-col gap-6 mb-8">
+                
+                <div class="rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200 flex flex-col">
+                    <img src="images/7. When the signal tower is not blinking, M5 Stack is lit green. When the signal tower flashes red light, the M5 Stack is lit red..png" alt="M5Stack FIRE mounted on EOS M 290 showing state alerts" class="w-full h-auto block">
+                    <div class="p-4 bg-white border-t border-neutral-200">
+                        <p class="text-xs text-neutral-500 leading-relaxed">Validation testing: The M5Stack successfully syncing with the machine's physical signal tower in real-time.</p>
+                    </div>
+                </div>
+                
+                <div class="rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200 flex flex-col">
+                    <img src="images/5. the new script is placed into the code to retrieve specific data from the InfluxDB database.png" alt="C++ Firmware querying InfluxDB" class="w-full h-auto block">
+                    <div class="p-4 bg-white border-t border-neutral-200">
+                        <p class="text-xs text-neutral-500 leading-relaxed">C++ logic executing custom Flux queries to fetch the latest InfluxDB telemetry.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <div>
             <h2 class="text-2xl font-semibold text-neutral-900 mb-4">Phase 3: The Data Pipeline</h2>
             <p class="mb-4">
